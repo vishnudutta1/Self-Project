@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 600px;
+            background-color: aquamarine;
+            height: 200px;
+            padding-left: ;
+            margin-left: 250px;
+            text-align: center;
+            
+            
+        }
+        .input{
+            padding-top: 125px;
+            padding-right:;
+           
+            width: 50px;
+            height: 5px;
+            margin-left: 10px;
+        }
+       
+        #second{
+              margin-top: -175px;
+            display: flex;
+           
+        }
+        h2{
+            text-align: left;
+         
+            height: 50px;
+            width: 300px;
+            padding-left: 120px  ;
+            margin: 50px;
+            padding-right: 100px;
+        }
+        #far
+        {
+            padding-bottom: 300px;
+            margin-left: 300px;
+        }
+        #cel{
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "main">
+     <h2>Temperature Converter</h2>
+
+      <div id = "second" >
+        <div class = "input" id = "cel">
+            <label for="celsuis"><h1>Celsius</h1></label>
+            <input type="Number" id = "celsius" value = "0">
+        </div>
+        <div class = "input" id = "far"> 
+         <label for="celsuis"><h1>Farenhite</h1></label>
+         <input type="Number" id = "farenhite" value = "32">
+        </div>
+     </div>
+      </div>
+</body>
+</html>
+
+<script>
+    let cel = document.getElementById("celsius")
+    let far = document.getElementById("farenhite")
+    cel.addEventListener("input",function(){
+        let c = this.value;
+        let f =  (9/5 * c) + 32;
+
+        if(!Number.isInteger(f)){
+            f = f.toFixed(4)
+        }
+        far.value =f
+
+
+    })
+
+    far.addEventListener("input",function(){
+        let f = this.value;
+        let c = (f - 32) * 5/9;
+        if(!Number.isInteger(c)){
+            c = c.toFixed(4)
+        }
+
+        cel.value = c
+
+
+    })
+  
+</script>
