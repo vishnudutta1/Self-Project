@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word and character counter</title>
+    <style>
+        h1{
+            text-align: center;
+            background-color: burlywood;
+            width: 500px;
+            margin-left: 290px;
+        }
+        #txtbox{
+            width: 500px;
+            text-align: ;
+            border:royalblue solid 2px;
+            margin-top: -20px;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Word And Character Counter</h1>
+
+    <textarea name="textbox" id="txtbox" cols="30" rows="10"></textarea>
+
+    <p>
+        <span id = "words">0</span> Words And
+        <span id = "cha">0</span> Character
+    </p>
+</body>
+</html>
+
+<script>
+    let txtbox = document.getElementById("txtbox")
+    txtbox.addEventListener("input",function(){
+        var text = this.value;
+        var char = text.length
+        document.getElementById("cha").innerHTML = char
+
+
+        let word = text.trim().split(" ")
+        let newar = []
+        for(var i = 0;i <word.length;i++){
+            if(word[i]!=""){
+                newar.push(word[i])
+            }
+        }
+       // console.log(word)
+      // console.log(newar)
+        document.getElementById("words").innerHTML = newar.length
+        
+
+    })
+</script>
