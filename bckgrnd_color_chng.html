@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #colorBox{
+           
+            width: 1200px;
+            
+            height: 25px;
+            display: flex;
+            /* padding-left: px; */
+            
+
+
+        }
+
+        .color{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border-spacing: 1px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #col1{
+            background-color: white;
+            border: black 1px solid;
+        }
+        #col2{
+            background-color:#7fffd4;
+        }
+        #col3{
+            background-color: #ce9aff;;
+        }
+        #col4{
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: -5px;
+        }
+        img{
+            padding-left: 400px;
+            height: 500px;
+            width: 500px;
+            text-align: center;
+            margin-top: -300;
+            border: black;
+           
+
+        }
+        p{
+            text-align: center;
+        }
+
+   
+        
+    </style>
+</head>
+<body>
+   
+   <div id = "colorBox">
+    <span class= "color" id = "col1" onclick="changeBG('#ffffff')"></span>
+    <span class= "color" id = "col2" onclick="changeBG('#7fffd4')"></span>
+    <span class= "color" id = "col3" onclick="changeBG('#ce9aff')"></span>
+    <span class= "color" id = "col4" onclick="changeBG('#000000')"></span>
+   </div>
+   <h1 class = "text">About Us</h1>
+   <img   src="https://image.shutterstock.com/image-photo/group-multiethnic-business-people-holding-260nw-191139815.jpg" alt="">
+  
+  
+   <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet autem aliquam facere, doloribus rerum consequatur minima ratione illum architecto perspiciatis vitae? Nisi corporis, hic tempora adipisci, animi esse obcaecati sit nostrum placeat non optio omnis, tempore pariatur facere ut ea possimus eveniet fuga rerum quisquam! Inventore harum earum eius minima tenetur similique? Voluptates, architecto numquam. Illum sunt minima perspiciatis numquam laborum esse autem consectetur, consequatur deserunt ducimus enim, perferendis nisi voluptatibus libero doloremque eius modi! Minima esse accusamus non libero tempore eligendi consequuntur praesentium dolorum perferendis, atque quo quam recusandae eum enim, dolor, nisi numquam quos ducimus facere vel nam quas distinctio adipisci. Similique deserunt illum reiciendis laboriosam, ullam totam cum id aspernatur quis molestias a soluta, recusandae labore mollitia veritatis quod nisi quisquam voluptatum repellat eligendi ipsa tempore placeat velit commodi! Numquam, dicta. Ex, molestiae doloremque eveniet magni odio pariatur soluta deserunt blanditiis rerum quibusdam voluptatem sunt officiis corporis ullam, omnis delectus laudantium natus earum atque fuga numquam illo? At ea obcaecati nulla excepturi quisquam temporibus consequuntur dicta reprehenderit, neque doloremque itaque corporis ducimus officiis natus laborum consequatur sed. Inventore assumenda maxime sed praesentium dolorem et reprehenderit. Labore asperiores aspernatur culpa ducimus doloremque unde vitae cumque, soluta quasi tempora obcaecati blanditiis in minus nesciunt reiciendis magnam eius sint quis consequatur, ad ratione voluptate vel libero reprehenderit! Magni ratione iusto amet qui accusamus nisi cupiditate odio eius reiciendis adipisci dolore ipsa vero, officia itaque quod molestias eum quis consequuntur minima ad nam. Adipisci, tempore vero possimus itaque natus reiciendis doloremque minima nobis debitis, voluptatum ad corporis at, blanditiis obcaecati molestias animi assumenda omnis vitae ex aut exercitationem quae sed accusamus aliquid! Adipisci molestias minus officiis labore mollitia veritatis reiciendis tempore iusto velit porro rerum ab, reprehenderit nihil quasi impedit aperiam officia nostrum sequi vero dolores accusamus dolore libero dolorem! Quisquam non ab, eius sapiente quae quia aperiam sit obcaecati nemo commodi voluptate ut aut mollitia atque et illo quod, ad laborum incidunt facilis tempore consequuntur optio rem est? Quidem recusandae, explicabo iure cupiditate facilis consequatur numquam, maiores non libero omnis magni pariatur, quae ratione esse officia quia delectus velit laudantium debitis dolore sunt voluptates accusantium. Soluta reprehenderit minus odio voluptas, distinctio expedita laudantium ab deserunt provident. Vel velit accusantium, eligendi hic at asperiores earum eius consequuntur culpa! Deserunt odit corporis atque odio fugit, laboriosam nemo, quisquam ipsam vel numquam consectetur necessitatibus, ex accusantium recusandae voluptatum similique doloremque iusto quo error totam aut laborum. Deserunt facere culpa accusamus expedita. At enim ipsa nulla, numquam vel, amet beatae ratione doloribus totam unde doloremque rem reprehenderit quod! Adipisci cum ratione nesciunt non maxime reprehenderit temporibus exercitationem minima eaque consequatur eius modi tempore voluptas in, animi neque molestias facilis voluptatibus recusandae eum mollitia? Doloribus magni sequi minima voluptas eligendi, facere, debitis culpa veniam aspernatur necessitatibus dicta. Animi unde similique, culpa quos explicabo quod molestiae placeat sunt cumque officia aliquam magni commodi molestias et nesciunt nihil a ad id suscipit consequuntur ab. Odit id est voluptatibus minus itaque incidunt iste accusantium tempora aut! Quae, nemo.</p>
+</body>
+</html>
+
+
+<script>
+   
+    function changeBG(color){
+
+        document.body.style.backgroundColor = color;
+
+        let text = document.getElementsByClassName("text")
+
+        
+         if(color == '#000000' ){
+           
+            for(let elm of text){
+                elm.style.color = "white";
+            }
+        }
+        else{
+            for(let elm of text){
+                elm.style.color = "black"
+            }
+        }
+       
+    }
+        
+    
+</script>
